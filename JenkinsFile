@@ -1,0 +1,26 @@
+def birth_date = '14/07/1982'
+def current_year = new Date().getYear()
+
+pipeline{
+    agent any
+    stages{
+        stage("Calcular Edad")
+        {
+            steps{
+				bith_year = birth_date.substring(6,4)
+				echo bith_year
+                //age = 
+            }
+        }
+        stage("Generar TXT")
+        {
+            steps{
+                script{
+                    echo "stage Generar TXT"
+                    
+                }
+            }
+        }
+       
+    }
+}
