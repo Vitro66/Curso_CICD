@@ -1,6 +1,5 @@
 def birth_date = '14/07/1982'
-def currentDate = new Date()
-def current_year = Calendar.getInstance().setTime(currentDate).get(Calendar.YEAR)
+def current_year = Calendar.getInstance().get(Calendar.YEAR)
 
 pipeline{
     agent any
