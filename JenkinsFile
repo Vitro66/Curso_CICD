@@ -1,5 +1,5 @@
 def birth_date = '14/07/1982'
-def cal = new Calendar()
+def cal = Calendar.getInstance()
 def currentDate = new Date()
 def current_year = cal.setTime(currentDate).get(Calendar.YEAR);
 
