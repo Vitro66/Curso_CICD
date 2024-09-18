@@ -1,7 +1,6 @@
 def birth_date = '14/07/1982'
 def currentDate = new Date()
-def cal = Calendar.getInstance().setTime(currentDate)
-def current_year = 2024 //cal.get(Calendar.YEAR)
+def current_year = Calendar.getInstance().setTime(currentDate).get(Calendar.YEAR)
 
 pipeline{
     agent any
@@ -13,7 +12,7 @@ pipeline{
 			birth_year = birth_date.substring(6,10)
 			echo "${birth_year}"
 			echo "${current_year}"
-                	age = birth_year.toInteger() - current_year
+                	age = current_year - birth_year.toInteger() 
 			echo "${age}"
 		}
             }
