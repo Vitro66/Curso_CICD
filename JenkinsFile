@@ -7,9 +7,11 @@ pipeline{
         stage("Calcular Edad")
         {
             steps{
+		script{
 				bith_year = birth_date.substring(6,4)
 				echo bith_year
-                //age = 
+                //age =
+		}
             }
         }
         stage("Generar TXT")
