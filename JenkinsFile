@@ -21,7 +21,8 @@ pipeline{
             steps{
                 script{
                     echo "stage Generar TXT"
-                    
+                    writeFile(file:"D:\\Borrar\\FichEdad.txt", text: "La edad es ${age}")
+			echo "Se genero el fichero"
                 }
             }
         }
