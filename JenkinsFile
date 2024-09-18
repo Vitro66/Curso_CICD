@@ -10,7 +10,7 @@ pipeline{
 		script{
 			birth_year = birth_date.substring(6,10)
 			echo "${birth_year}"
-                	age = birth_year.toInteger() - currentyear
+                	age = birth_year.toInteger() - current_year
 			echo "${age}"
 		}
             }
