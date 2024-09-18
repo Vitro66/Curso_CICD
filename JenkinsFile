@@ -8,9 +8,10 @@ pipeline{
         {
             steps{
 		script{
-				bith_year = birth_date.substring(6,4)
-				echo bith_year
-                //age =
+			birth_year = birth_date.substring(6,4)
+			echo birth_year
+                	age = birth_year.toInteger() - currentyear
+			echo age
 		}
             }
         }
